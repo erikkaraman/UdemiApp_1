@@ -1,1 +1,1 @@
-- [DEMO LINK](https://erikkaraman7.github.io/UdemiApp_1)
+- [DEMO LINK](https://erikkaraman.github.io/UdemiApp_1)
