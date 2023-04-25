@@ -20,18 +20,23 @@ const personalMovieDB = {
     privat: false
 };
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('один з останніх переглянутих фільмів?', '');
-    const b = prompt('яку оцінку даси йому?', '');
 
-    if (a !== null && b !== null && a !== '' && b !== '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('done');
-    } else {
-        console.log('error');
-        i--;
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt('один з останніх переглянутих фільмів?', '').trim();
+        const b = prompt('яку оцінку даси йому?', '');
+    
+        if (a !== null && b !== null && a !== '' && b !== '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        } else {
+            console.log('error');
+            i--;
+        };
     };
-};
+}
+
+rememberMyFilms();
 
 function detectPersonalLevel() {
     if (personalMovieDB.count < 10) {
